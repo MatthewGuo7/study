@@ -1,0 +1,14 @@
+syntax="proto3";
+package services;
+
+import "Models.proto";
+
+message OrdersResp {
+  int32 code = 1;
+  string msg = 2;
+  map<int32, string> m = 3;
+}
+
+service OrderService {
+  rpc NewOrder(OrderInfo) returns (OrdersResp);
+}

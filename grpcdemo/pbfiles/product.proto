@@ -1,15 +1,34 @@
-syntax = "proto3";
+syntax="proto3";
 package services;
+
+import "Models.proto";
+
+enum ProductArea {
+  A = 0;
+  B = 1;
+  C = 2;
+}
 
 message ProductReq {
   int32 prod_id = 1; //商品id
+  ProductArea area = 2;
 }
 
 message ProductResp {
   int32 prod_stock = 1; //商品库存
 }
 
+message ProductsReq {
+  int32 QuerySize = 1;
+}
+
+message ProductsResp {
+  repeated ProductResp products = 1;
+}
+
 service ProductService {
   rpc GetProductStock(ProductReq) returns (ProductResp);
+  rpc GetProducts(ProductsReq) returns (ProductsResp);
+  rpc GetProductInfo(ProductReq) returns (ProductInfo);
 }
 

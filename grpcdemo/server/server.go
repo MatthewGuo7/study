@@ -1,27 +1,37 @@
 package main
 
 import (
-	"fmt"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 	"grpcdemo/services"
 	"log"
-	"net/http"
+	"net"
 )
 
 func main() {
-	srv := grpc.NewServer()
-	services.RegisterProductServiceServer(srv, &services.ProductService{})
 
-	//l, err := net.Listen("tcp", ":8082")
+	//creds, err := credentials.NewServerTLSFromFile("pem/server.crt", "pem/server.key")
 	//if nil != err {
 	//	log.Fatal(err)
 	//}
 
-	//srv.Serve(l)
+	//srv := grpc.NewServer(grpc.Creds(creds))
+	srv := grpc.NewServer()
+	services.RegisterProductServiceServer(srv, &services.ProductService{})
 
+	reflection.Register(srv)
+
+	l, err := net.Listen("tcp", ":8081")
+	if nil != err {
+		log.Fatal(err)
+	}
+
+	srv.Serve(l)
+
+	/*
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		fmt.Println(request)
+		fmt.Printf("req = %+v", request)
 		srv.ServeHTTP(writer, request)
 	})
 
@@ -30,9 +40,10 @@ func main() {
 		Handler: mux,
 	}
 
+	//err = httpServer.ListenAndServeTLS("pem/server.crt", "pem/server.key")
 	err := httpServer.ListenAndServe()
 	if nil != err {
 		log.Fatal(err)
 	}
-
+	 */
 }

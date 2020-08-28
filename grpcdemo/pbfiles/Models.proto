@@ -1,0 +1,17 @@
+syntax="proto3";
+package services;
+
+import "google/protobuf/timestamp.proto";
+
+message ProductInfo {
+  int32 ProductID = 1;
+  string ProductName = 2;
+}
+
+message OrderInfo {
+  int32 OrderID = 1;
+  string OrderNo = 2;
+  google.protobuf.Timestamp create_time = 3;
+}
+
+
