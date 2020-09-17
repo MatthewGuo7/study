@@ -1,4 +1,4 @@
-syntax="proto3";
+syntax = "proto3";
 package services;
 
 import "Models.proto";
@@ -16,6 +16,7 @@ message ProductReq {
 
 message ProductResp {
   int32 prod_stock = 1; //商品库存
+  map<int32, int32> m = 2;
 }
 
 message ProductsReq {
@@ -24,6 +25,7 @@ message ProductsReq {
 
 message ProductsResp {
   repeated ProductResp products = 1;
+  map<int32, int32> m = 2;
 }
 
 service ProductService {

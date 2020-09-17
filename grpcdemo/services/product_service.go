@@ -11,8 +11,8 @@ type ProductService struct {
 func (p *ProductService) GetProductInfo(ctx context.Context, req *ProductReq) (*ProductInfo, error) {
 	fmt.Println(req)
 	return &ProductInfo{
-		ProductID:     50,
-		ProductName:   "test",
+		ProductID:   50,
+		ProductName: "test",
 	}, nil
 }
 
@@ -25,6 +25,10 @@ func (p *ProductService) GetProducts(ctx context.Context, req *ProductsReq) (*Pr
 	}
 	resp := &ProductsResp{
 		Products: products,
+		M: map[int32]int32{
+			1: 1,
+			2: 2,
+		},
 	}
 
 	return resp, nil
@@ -36,7 +40,6 @@ func (p *ProductService) GetProductStock(ctx context.Context, req *ProductReq) (
 	if req.Area == ProductArea_B {
 		resp.ProdStock = 20
 	}
-
 
 	return resp, nil
 }

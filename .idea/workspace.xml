@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d2c7c39-c042-4d73-933d-7967ca441642" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api.snoopy.com/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api.snoopy.com/src/dao/topicDao/topic_dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api.snoopy.com/src/model/topic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api.snoopy.com/src/model/topic_validator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api.snoopy.com/src/proto/get_topic_req.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api.snoopy.com/src/proto/new_topic_req.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpcdemo/interceptor/interceptor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/forward_proxy/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcdemo/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcdemo/client/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcdemo/pbfiles/product.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpcdemo/pbfiles/product.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcdemo/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcdemo/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcdemo/services/order_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcdemo/services/order_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcdemo/services/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcdemo/services/product.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcdemo/services/product_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcdemo/services/product_service.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gLxYOT0RSn12D325cWIDeP6yfi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/etcddemo/endpoint" />
+      <recent name="$PROJECT_DIR$/etcddemo/service" />
+      <recent name="$PROJECT_DIR$/etcddemo/register" />
+      <recent name="$PROJECT_DIR$/etcddemo" />
+      <recent name="$PROJECT_DIR$/grpcdemo/client" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build etcddemo/client">
+    <configuration name="go build etcddemo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <working_directory value="$PROJECT_DIR$/etcddemo" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/etcddemo/main.go" />
+      <package value="etcddemo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build etcddemo/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <working_directory value="$PROJECT_DIR$/etcddemo" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/etcddemo/client/client.go" />
+      <package value="etcddemo/client" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build etcddemo/service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <working_directory value="$PROJECT_DIR$/etcddemo" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/etcddemo/service/main.go" />
+      <package value="etcddemo/service" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build firstdemo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <working_directory value="$PROJECT_DIR$/etcddemo/firstdemo" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/etcddemo/firstdemo/main.go" />
+      <package value="firstdemo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestFirst in etcddemo" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <working_directory value="$PROJECT_DIR$/etcddemo" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="etcddemo" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestFirst$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build etcddemo/client" />
+        <item itemvalue="Go Build.go build etcddemo/service" />
+        <item itemvalue="Go Build.go build etcddemo" />
+        <item itemvalue="Go Build.go build firstdemo" />
+        <item itemvalue="Go Test.TestFirst in etcddemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <auto-vendoring-mode>false</auto-vendoring-mode>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="460" y="252" key="#Go_Modules" timestamp="1597908423589">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="460" y="252" key="#Go_Modules/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597908423589" />
+    <state x="543" y="255" key="#Notifications" timestamp="1597910515613">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="543" y="255" key="#Notifications/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597910515613" />
+    <state x="1966" y="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600322932359">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state x="1966" y="411" key="#com.intellij.fileTypes.FileTypeChooser/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1600322932359" />
+    <state x="1950" y="191" key="#com.intellij.ide.util.MemberChooser" timestamp="1600313738523">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state x="473" y="134" key="#com.intellij.ide.util.MemberChooser/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597909931581" />
+    <state x="1950" y="191" key="#com.intellij.ide.util.MemberChooser/41.23.1239.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599466621091" />
+    <state x="1950" y="191" key="#com.intellij.ide.util.MemberChooser/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1600313738523" />
+    <state x="1932" y="252" key="#go_build_grpcdemo/cmd" timestamp="1598264470422">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state x="1932" y="252" key="#go_build_grpcdemo/cmd/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1598264470422" />
+    <state width="1878" height="206" key="GridCell.Tab.0.bottom" timestamp="1600337441356">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state width="1197" height="242" key="GridCell.Tab.0.bottom/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597910169367" />
+    <state width="1878" height="343" key="GridCell.Tab.0.bottom/41.23.1239.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599469175441" />
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom/43.23.1237.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599466138998" />
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom/44.23.1236.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599043316930" />
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom/46.23.1234.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599098466488" />
+    <state width="1878" height="450" key="GridCell.Tab.0.bottom/47.23.1233.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599622181059" />
+    <state width="1878" height="206" key="GridCell.Tab.0.bottom/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1600337441356" />
+    <state width="1878" height="206" key="GridCell.Tab.0.center" timestamp="1600337441355">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state width="1197" height="242" key="GridCell.Tab.0.center/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597910169365" />
+    <state width="1878" height="343" key="GridCell.Tab.0.center/41.23.1239.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599469175440" />
+    <state width="1878" height="291" key="GridCell.Tab.0.center/43.23.1237.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599466138997" />
+    <state width="1878" height="291" key="GridCell.Tab.0.center/44.23.1236.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599043316929" />
+    <state width="1878" height="291" key="GridCell.Tab.0.center/46.23.1234.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599098466487" />
+    <state width="1878" height="450" key="GridCell.Tab.0.center/47.23.1233.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599622181058" />
+    <state width="1878" height="206" key="GridCell.Tab.0.center/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1600337441355" />
+    <state width="1878" height="206" key="GridCell.Tab.0.left" timestamp="1600337441355">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state width="1197" height="242" key="GridCell.Tab.0.left/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597910169363" />
+    <state width="1878" height="343" key="GridCell.Tab.0.left/41.23.1239.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599469175439" />
+    <state width="1878" height="291" key="GridCell.Tab.0.left/43.23.1237.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599466138993" />
+    <state width="1878" height="291" key="GridCell.Tab.0.left/44.23.1236.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599043316928" />
+    <state width="1878" height="291" key="GridCell.Tab.0.left/46.23.1234.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599098466487" />
+    <state width="1878" height="450" key="GridCell.Tab.0.left/47.23.1233.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599622181056" />
+    <state width="1878" height="206" key="GridCell.Tab.0.left/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1600337441355" />
+    <state width="1878" height="206" key="GridCell.Tab.0.right" timestamp="1600337441356">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state width="1197" height="242" key="GridCell.Tab.0.right/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597910169366" />
+    <state width="1878" height="343" key="GridCell.Tab.0.right/41.23.1239.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599469175441" />
+    <state width="1878" height="291" key="GridCell.Tab.0.right/43.23.1237.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599466138998" />
+    <state width="1878" height="291" key="GridCell.Tab.0.right/44.23.1236.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599043316929" />
+    <state width="1878" height="291" key="GridCell.Tab.0.right/46.23.1234.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599098466488" />
+    <state width="1878" height="450" key="GridCell.Tab.0.right/47.23.1233.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599622181059" />
+    <state width="1878" height="206" key="GridCell.Tab.0.right/48.23.1232.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1600337441356" />
+    <state x="1459" y="85" key="SettingsEditor" timestamp="1599459538381">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state x="169" y="50" key="SettingsEditor/40.23.1240.777/1280.23.1920.1177@40.23.1240.777" timestamp="1597910448486" />
+    <state x="1459" y="85" key="SettingsEditor/43.23.1237.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599459538381" />
+    <state x="175" y="50" key="SettingsEditor/47.23.1233.777/1280.23.1920.1177@47.23.1233.777" timestamp="1598338761753" />
+    <state x="1529" y="173" width="1271" height="905" key="find.popup" timestamp="1599211027859">
+      <screen x="1280" y="23" width="1920" height="1177" />
+    </state>
+    <state x="1529" y="173" width="1271" height="905" key="find.popup/43.23.1237.777/1280.23.1920.1177@1280.23.1920.1177" timestamp="1599211027859" />
+  </component>
+</project>

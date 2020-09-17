@@ -3,6 +3,7 @@ package main
 import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+	"grpcdemo/interceptor"
 	"grpcdemo/services"
 	"log"
 	"net"
@@ -16,7 +17,11 @@ func main() {
 	//}
 
 	//srv := grpc.NewServer(grpc.Creds(creds))
-	srv := grpc.NewServer()
+	opt := []grpc.ServerOption{
+		grpc.UnaryInterceptor(interceptor.ServerIntercept),
+	}
+
+	srv := grpc.NewServer(opt...)
 	services.RegisterProductServiceServer(srv, &services.ProductService{})
 
 	reflection.Register(srv)

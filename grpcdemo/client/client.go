@@ -6,6 +6,7 @@ import (
 	"google.golang.org/grpc"
 	"grpcdemo/services"
 	"log"
+	"time"
 )
 
 func main() {
@@ -16,12 +17,12 @@ func main() {
 	}
 
 	client := services.NewProductServiceClient(conn)
-	req := services.ProductReq{
-		Area:   services.ProductArea_B,
-		ProdId: 1,
+	req := services.ProductsReq{
+		QuerySize: 1,
 	}
-	resp, err := client.GetProductStock(context.Background(), &req)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	resp, err := client.GetProducts(ctx, &req, grpc.EmptyCallOption{})
 
 	fmt.Printf("resp = %+v, err = %+v", resp, err)
-
 }

@@ -3,6 +3,7 @@ module study
 go 1.13
 
 require (
+	github.com/fullstorydev/grpcurl v1.7.0 // indirect
 	github.com/go-kit/kit v0.10.0
 	github.com/golang/protobuf v1.4.2 // indirect
 	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
