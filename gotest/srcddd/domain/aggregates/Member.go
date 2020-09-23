@@ -12,7 +12,7 @@ type Member struct {
 	userLogRepo repos.IUserLogRepo
 }
 
-func NewMember(user *models.UserModel, log *models.UserLogModel, userRepo *repos.IUserRepo, userLogRepo *repos.IUserLogRepo) *Member {
+func NewMember(user *models.UserModel, log *models.UserLogModel, userRepo repos.IUserRepo, userLogRepo repos.IUserLogRepo) *Member {
 	return &Member{User: user, Log: log, userRepo: userRepo, userLogRepo: userLogRepo}
 }
 
