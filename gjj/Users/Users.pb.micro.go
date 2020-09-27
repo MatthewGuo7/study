@@ -33,13 +33,13 @@ var _ context.Context
 var _ client.Option
 var _ server.Option
 
-// Api Endpoints for UserService service
+// Api Endpoints for UserServiceImpl service
 
 func NewUserServiceEndpoints() []*api.Endpoint {
 	return []*api.Endpoint{}
 }
 
-// Client API for UserService service
+// Client API for UserServiceImpl service
 
 type UserService interface {
 	Test(ctx context.Context, in *UserRequest, opts ...client.CallOption) (*UserResp, error)
@@ -58,7 +58,7 @@ func NewUserService(name string, c client.Client) UserService {
 }
 
 func (c *userService) Test(ctx context.Context, in *UserRequest, opts ...client.CallOption) (*UserResp, error) {
-	req := c.c.NewRequest(c.name, "UserService.Test", in)
+	req := c.c.NewRequest(c.name, "UserServiceImpl.Test", in)
 	out := new(UserResp)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -67,7 +67,7 @@ func (c *userService) Test(ctx context.Context, in *UserRequest, opts ...client.
 	return out, nil
 }
 
-// Server API for UserService service
+// Server API for UserServiceImpl service
 
 type UserServiceHandler interface {
 	Test(context.Context, *UserRequest, *UserResp) error

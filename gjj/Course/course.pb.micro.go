@@ -42,7 +42,8 @@ func NewCourseServiceEndpoints() []*api.Endpoint {
 // Client API for CourseService service
 
 type CourseService interface {
-	ListForTop(ctx context.Context, in *CourseReq, opts ...client.CallOption) (*CourseResp, error)
+	ListForTop(ctx context.Context, in *CourseListReq, opts ...client.CallOption) (*CourseListResp, error)
+	GetCourseDetail(ctx context.Context, in *CourseDetailReq, opts ...client.CallOption) (*CourseDetailResp, error)
 }
 
 type courseService struct {
@@ -57,9 +58,19 @@ func NewCourseService(name string, c client.Client) CourseService {
 	}
 }
 
-func (c *courseService) ListForTop(ctx context.Context, in *CourseReq, opts ...client.CallOption) (*CourseResp, error) {
+func (c *courseService) ListForTop(ctx context.Context, in *CourseListReq, opts ...client.CallOption) (*CourseListResp, error) {
 	req := c.c.NewRequest(c.name, "CourseService.ListForTop", in)
-	out := new(CourseResp)
+	out := new(CourseListResp)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *courseService) GetCourseDetail(ctx context.Context, in *CourseDetailReq, opts ...client.CallOption) (*CourseDetailResp, error) {
+	req := c.c.NewRequest(c.name, "CourseService.GetCourseDetail", in)
+	out := new(CourseDetailResp)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
 		return nil, err
@@ -70,12 +81,14 @@ func (c *courseService) ListForTop(ctx context.Context, in *CourseReq, opts ...c
 // Server API for CourseService service
 
 type CourseServiceHandler interface {
-	ListForTop(context.Context, *CourseReq, *CourseResp) error
+	ListForTop(context.Context, *CourseListReq, *CourseListResp) error
+	GetCourseDetail(context.Context, *CourseDetailReq, *CourseDetailResp) error
 }
 
 func RegisterCourseServiceHandler(s server.Server, hdlr CourseServiceHandler, opts ...server.HandlerOption) error {
 	type courseService interface {
-		ListForTop(ctx context.Context, in *CourseReq, out *CourseResp) error
+		ListForTop(ctx context.Context, in *CourseListReq, out *CourseListResp) error
+		GetCourseDetail(ctx context.Context, in *CourseDetailReq, out *CourseDetailResp) error
 	}
 	type CourseService struct {
 		courseService
@@ -88,6 +101,10 @@ type courseServiceHandler struct {
 	CourseServiceHandler
 }
 
-func (h *courseServiceHandler) ListForTop(ctx context.Context, in *CourseReq, out *CourseResp) error {
+func (h *courseServiceHandler) ListForTop(ctx context.Context, in *CourseListReq, out *CourseListResp) error {
 	return h.CourseServiceHandler.ListForTop(ctx, in, out)
+}
+
+func (h *courseServiceHandler) GetCourseDetail(ctx context.Context, in *CourseDetailReq, out *CourseDetailResp) error {
+	return h.CourseServiceHandler.GetCourseDetail(ctx, in, out)
 }

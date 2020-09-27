@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/micro/go-micro/v2"
 	"gjj/Course"
+	"gjj/service"
 	"log"
 )
 
@@ -14,7 +15,7 @@ func main() {
 
 	server.Init()
 
-	err := Course.RegisterCourseServiceHandler(server.Server(), Course.NewCourseImpl())
+	err := Course.RegisterCourseServiceHandler(server.Server(), service.NewCourseImpl())
 	if nil != err {
 		log.Fatal(err)
 	}

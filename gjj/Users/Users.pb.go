@@ -152,8 +152,8 @@ var file_Users_proto_goTypes = []interface{}{
 	(*UserResp)(nil),    // 1: Users.UserResp
 }
 var file_Users_proto_depIdxs = []int32{
-	0, // 0: Users.UserService.Test:input_type -> Users.UserRequest
-	1, // 1: Users.UserService.Test:output_type -> Users.UserResp
+	0, // 0: Users.UserServiceImpl.Test:input_type -> Users.UserRequest
+	1, // 1: Users.UserServiceImpl.Test:output_type -> Users.UserResp
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

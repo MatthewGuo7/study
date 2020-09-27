@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/micro/go-micro/v2"
 	"gjj/Users"
-	"gjj/service"
 	"log"
 )
 
@@ -13,7 +12,7 @@ func main() {
 		)
 	server.Init()
 
-	err := Users.RegisterUserServiceHandler(server.Server(), service.NewUserService())
+	err := Users.RegisterUserServiceHandler(server.Server(), Users.NewUserServiceImpl())
 	if nil != err {
 		log.Fatal(err)
 	}

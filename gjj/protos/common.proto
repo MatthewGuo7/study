@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+package Course;
+
+message TimeStamp {
+  google.protobuf.Timestamp timestamp = 1;
+}
+
+message PageInfo{
+  int32 pageNo = 1;
+  int32 pageSize = 2;
+  int32 totalCount = 3;
+  int32 totalPage = 4;
+}
+

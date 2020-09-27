@@ -1,0 +1,7 @@
+mysql:
+    dsn: root:snoopy@tcp(localhost:3306)/gomicro?charset=utf8mb4&parseTime=True&loc=Local
+    maxidle: 5
+    maxopen: 10
+redis:
+    ip: 192.168.3.1
+    port: 6379

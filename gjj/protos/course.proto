@@ -1,19 +1,53 @@
 syntax = "proto3";
+import "common.proto";
+
 package  Course;
 
-message CourseReq {
+message CourseListReq {
+  // @inject_tag: binding:"required,oneof=10 20 30"
   int32 size = 1;
+  // @inject_tag: binding:"required,gte=1,lte=50"
+  int32 page = 2;
 }
 
 message CourseModel {
   int32 course_id = 1;
   string course_name = 2;
+  float  course_price = 3;
+  float  course_price2 = 4;
+  // @inject_tag: gorm:"type:timestamp"
+  TimeStamp addtime = 6;
+  string course_intr = 7;
 }
 
-message CourseResp {
+message CourseListResp {
   repeated CourseModel courses = 1;
+  PageInfo pageInfo = 2;
+}
+
+message CourseDetailReq {
+  // @inject_tag: uri:"course_id"
+  int32 course_id = 1;
+  // @inject_tag: header:"req_type"
+  int32  req_type = 2;
+}
+
+message CourseCount {
+  // @inject_tag: json:"-"
+  int32 count_id = 1;
+  // @inject_tag: json:"-"
+  int32 course_id = 2;
+
+  string count_key = 3;
+  int64  count_value = 4;
+}
+
+message CourseDetailResp {
+  CourseModel courseDetail = 1;
+  repeated CourseCount course_counts = 2;
 }
 
 service CourseService {
-  rpc ListForTop(CourseReq) returns (CourseResp);
+  rpc ListForTop(CourseListReq) returns (CourseListResp);
+  rpc GetCourseDetail(CourseDetailReq) returns (CourseDetailResp);
 }
