@@ -6,6 +6,7 @@ require (
 	github.com/fullstorydev/grpcurl v1.7.0 // indirect
 	github.com/go-kit/kit v0.10.0
 	github.com/golang/protobuf v1.4.2 // indirect
+	github.com/shenyisyn/goft-gin v0.3.6 // indirect
 	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
 	golang.org/x/sys v0.0.0-20200821140526-fda516888d29 // indirect
 	golang.org/x/text v0.3.3 // indirect
