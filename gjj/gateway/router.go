@@ -21,7 +21,7 @@ type Router struct {
 	Id         string
 	Url        string
 	Predicates Predicates
-	Filters    []*Filter
+	Filters    []interface{}
 }
 
 func (r *Router) IsMatch(request *http.Request) bool {

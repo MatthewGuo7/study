@@ -4,3 +4,7 @@ routers:
     Predicates:
       path: /v1/*
       header: X-Id,\d+
+    Filters:
+      - StripPrefix = 2
+      - id: 101
+        name: abc

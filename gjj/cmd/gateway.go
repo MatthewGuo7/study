@@ -24,11 +24,16 @@ func main() {
 
 			exchange := gateway.NewServerWebExchange(request)
 
-			gateway.NewStringsPrefixFilter().Apply()(exchange)
+			//gateway.NewStringsPrefixFilter().Apply()(exchange)
+			r.FilterRequest(exchange)
 
 			fmt.Printf("replaced url path = %+v", request.URL.Path)
 
 			proxy := httputil.NewSingleHostReverseProxy(remote)
+			proxy.ModifyResponse = func(response *http.Response) error {
+				response.Header.Add("name", "abc")
+				return nil
+			}
 			proxy.ServeHTTP(writer, request)
 		} else {
 			writer.WriteHeader(http.StatusNotFound)
