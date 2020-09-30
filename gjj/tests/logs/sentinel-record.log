@@ -1,0 +1,32 @@
+2020/09/29 10:54:13 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 10:54:13 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29
+2020/09/29 10:54:13 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.idx
+2020/09/29 10:54:13 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":0,"count":10,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":0,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 10:55:43 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 10:55:43 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.1
+2020/09/29 10:55:43 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.1.idx
+2020/09/29 10:55:43 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":0,"count":10,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":0,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 10:56:20 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 10:56:20 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.2
+2020/09/29 10:56:20 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.2.idx
+2020/09/29 10:56:20 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":0,"count":2,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":0,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 17:41:33 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 17:41:33 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.3
+2020/09/29 17:41:33 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.3.idx
+2020/09/29 17:41:33 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":0,"count":2,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":0,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 17:45:36 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 17:45:36 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.4
+2020/09/29 17:45:36 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.4.idx
+2020/09/29 17:45:36 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":0,"count":2,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":0,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 17:53:38 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 17:53:38 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.5
+2020/09/29 17:53:38 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.5.idx
+2020/09/29 17:53:38 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":1,"count":2,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":2000000000,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 17:56:33 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 17:56:33 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.6
+2020/09/29 17:56:33 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.6.idx
+2020/09/29 17:56:33 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":1,"count":2,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":2000000000,"warmUpPeriodSec":0,"warmUpColdFactor":0}]
+2020/09/29 17:58:00 logging.go:127: [] [INFO] App name resolved: myweb
+2020/09/29 17:58:00 logging.go:127: [] [INFO] [MetricWriter] New metric log file created: logs/myweb-metrics.log.2020-09-29.7
+2020/09/29 17:58:00 logging.go:127: [] [INFO] [MetricWriter] New metric log index file created: logs/myweb-metrics.log.2020-09-29.7.idx
+2020/09/29 17:58:00 logging.go:127: [] [INFO] [FlowRuleManager] Flow rules were loaded: [{"resource":"abc","metricType":1,"tokenCalculateStrategy":0,"controlBehavior":1,"count":2,"relationStrategy":0,"refResource":"","maxQueueingTimeMs":2000000000,"warmUpPeriodSec":0,"warmUpColdFactor":0}]

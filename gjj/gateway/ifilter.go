@@ -26,7 +26,16 @@ type IFilter interface {
 	Apply(config interface{}) GateWayFilter
 }
 
-type GateWayFilter func(exchange *ServerWebExchange)
+type ResponseFilter func(response *http.Response)
+type GateWayFilter func(exchange *ServerWebExchange)ResponseFilter
+
+type ResponseFilters []ResponseFilter
+
+func (r ResponseFilters) Filter(response *http.Response) {
+	for _, filter := range r {
+		filter(response)
+	}
+}
 
 type SimpleFilter string
 
@@ -46,15 +55,21 @@ func (s SimpleFilter) Filter() GateWayFilter {
 	return nil
 }
 
-func (r Router) FilterRequest(exchange *ServerWebExchange) {
+func (r Router) FilterRequest(exchange *ServerWebExchange) ResponseFilters {
+	retFilters := make(ResponseFilters, 0)
 	for _, f := range r.Filters {
 		v := reflect.ValueOf(f)
 		if v.Kind() == reflect.String {
 			fmt.Println(v.String())
 			gwFilter := SimpleFilter(strings.Trim(v.String(), " ")).Filter()
 			if nil != gwFilter {
-				gwFilter(exchange)
+				responseFilter := gwFilter(exchange)
+				if nil != responseFilter {
+					retFilters = append(retFilters, responseFilter)
+				}
 			}
 		}
 	}
+
+	return retFilters
 }

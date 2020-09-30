@@ -12,6 +12,7 @@ var BootErrChan chan error
 func BootInit()  {
 	BootErrChan =make(chan error)
 	config.InitConfig("app.yaml")
+	fmt.Printf("mysql  = %+v\n", config.JConfig.DataConfig.MySql)
 	go func() {
 		err:=WaitForConfigReady(time.Second*5)
 		if err!=nil{
@@ -20,7 +21,7 @@ func BootInit()  {
 			 WaitForDbReady(time.Second*5)  //数据库初始化
 		}
 	}()
-
+	WaitForDbReady(time.Second*5)  //数据库初始化
 }
 //服务器已经准备好了 ,,后面要不断扩展
 func ServerIsReady() bool  {

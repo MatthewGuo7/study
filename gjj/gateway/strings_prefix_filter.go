@@ -2,6 +2,7 @@ package gateway
 
 import (
 	"fmt"
+	"net/http"
 	"strconv"
 	"strings"
 )
@@ -14,7 +15,7 @@ type StringsPrefixFilter struct {
 }
 
 func (s *StringsPrefixFilter) Apply(config interface{}) GateWayFilter {
-	return func(exchange *ServerWebExchange) {
+	return func(exchange *ServerWebExchange)ResponseFilter {
 		request := exchange.request
 
 		path := request.URL.Path
@@ -23,7 +24,7 @@ func (s *StringsPrefixFilter) Apply(config interface{}) GateWayFilter {
 		valueConf := ValueConfig(config.(string))
 		temp, err := strconv.Atoi(valueConf.Get()[0])
 		if nil != err {
-			return
+			return nil
 		}
 
 		defIndex = temp
@@ -34,6 +35,9 @@ func (s *StringsPrefixFilter) Apply(config interface{}) GateWayFilter {
 		newPath := strings.Join(pathList[defIndex+1:], "/")
 		request.URL.Path = newPath
 		fmt.Printf("new path = %+v\n", newPath)
+		return func(response *http.Response) {
+			response.Header.Add("test", "Test")
+		}
 	}
 }
 

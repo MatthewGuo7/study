@@ -29,7 +29,7 @@ func (c *CourseImpl) GetCourseDetail(ctx context.Context, req *Course.CourseDeta
 }
 
 func NewCourseImpl(db *gorm.DB) *CourseImpl {
-	return &CourseImpl{db: db}
+	return &CourseImpl{db: db.New()}
 }
 
 func (c *CourseImpl) ListForTop(ctx context.Context, req *Course.CourseListReq, resp *Course.CourseListResp) error {

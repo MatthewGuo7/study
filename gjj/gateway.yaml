@@ -1,10 +1,19 @@
+discovery:
+  loadbalancer:
+    schemePrefix: lb
+  registry:
+    type: etcd
+    address: localhost:2379
+
 routers:
   - id: course1
-    url: http://localhost:9000
+    namespace: go.micro.api.snoopy
+    url: lb://http.course
     Predicates:
       path: /v1/*
       header: X-Id,\d+
     Filters:
       - StripPrefix = 2
+      - CrossDomain
       - id: 101
         name: abc

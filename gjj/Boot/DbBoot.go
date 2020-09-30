@@ -1,6 +1,7 @@
 package Boot
 
 import (
+	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"gjj/config"
@@ -34,6 +35,7 @@ func InitMysql() error {
 	mysql_db.Debug()
 	mysql_db.DB().SetMaxIdleConns(config.JConfig.DataConfig.MySql.Maxidle)
 	mysql_db.DB().SetMaxOpenConns(config.JConfig.DataConfig.MySql.Maxopen)
+	fmt.Printf("init mysql , db = %+v", mysql_db)
 	return nil
 }
 

@@ -3,6 +3,7 @@ package gateway
 import (
 	"gjj/gateway/predicates"
 	"net/http"
+	"net/url"
 	"reflect"
 	"strings"
 )
@@ -19,9 +20,34 @@ type Filter struct {
 
 type Router struct {
 	Id         string
+	Namespace  string
 	Url        string
 	Predicates Predicates
 	Filters    []interface{}
+}
+
+func (r *Router) GetAddress() *url.URL {
+	discovery := GetSysConfig().Discovery
+	remote, err := url.Parse(r.Url)
+	if nil != err {
+		return nil
+	}
+
+	if remote.Scheme == discovery.Loadbalancer.SchemePrefix {
+		serviceName := remote.Host
+		if r.Namespace != "" {
+			serviceName = r.Namespace + "." + remote.Host
+		}
+		node := discovery.GetServiceNode(serviceName)
+		if nil == node {
+			panic("error service")
+		}
+		r, _ := url.Parse("http://" + node.Address)
+		return r
+	} else {
+		return remote
+	}
+
 }
 
 func (r *Router) IsMatch(request *http.Request) bool {

@@ -3,6 +3,7 @@ module study
 go 1.13
 
 require (
+	github.com/alibaba/sentinel-golang v0.6.1 // indirect
 	github.com/fullstorydev/grpcurl v1.7.0 // indirect
 	github.com/go-kit/kit v0.10.0
 	github.com/golang/protobuf v1.4.2 // indirect
